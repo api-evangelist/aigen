@@ -1,17 +1,35 @@
 aid: aigen
 name: Aigen
-description: 'Aigen is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Aigen ("AI Generated Agriculture") is a Kirkland, Washington robotics company founded in 2020 that
+  builds fully autonomous, solar-powered farm robots for daily, chemical-free weed control. Its
+  flagship product, the Element, uses AI vision to identify and mechanically strike weeds — including
+  herbicide-resistant weeds — with no herbicides, running on solar power with onboard battery storage
+  and coordinating as a crew over a mesh network. In 2026 Aigen introduced Alchemy, a generative world
+  model for outdoor physical AI that produces self-labeling synthetic training data. Aigen sells a
+  managed robotics-as-a-service engagement rather than a self-serve developer product: growers are
+  onboarded through a local Aigen agent and an intake form, and Aigen operates and maintains the fleet
+  through the growing season. As of this profile Aigen publishes no public developer portal, API
+  reference, or machine-readable API contract.
 url: https://raw.githubusercontent.com/api-evangelist/aigen/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment
 specificationVersion: '0.20'
 created: '2026-09-14'
 modified: '2026-09-14'
+image: https://aigen.io/assets/brand/landscape-logo-thumbnail.png
+position: Producing
 tags:
 - Company
+- Robotics
+- Agriculture
+- Agriculture Technology
+- Artificial Intelligence
+- Autonomous Systems
+- Machine Vision
+- Sustainability
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +38,55 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.aigen.io/
+- type: About
+  url: https://www.aigen.io/about
+- type: Blog
+  url: https://www.aigen.io/news
+- type: Support
+  url: https://www.aigen.io/contact
+- type: PrivacyPolicy
+  url: https://www.aigen.io/privacy
+- type: LinkedIn
+  url: https://www.linkedin.com/company/aigeninc
+- type: Twitter
+  url: https://twitter.com/Aigenio
+- type: YouTube
+  url: https://www.youtube.com/@aigen-inc
+- type: Careers
+  url: https://jobs.lever.co/aigen/
+- type: LLMsTxt
+  url: llms/aigen-llms.txt
+- type: ContentSignal
+  url: well-known/aigen-robots.txt
+- type: DomainSecurity
+  url: security/aigen-domain-security.yml
+- type: Plans
+  url: plans/aigen-plans-pricing.yml
+- type: Packages
+  url: packages/aigen-packages.yml
+x-enrichment:
+  date: '2026-09-14'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Aigen sells a managed robotics-as-a-service engagement, not software access: the only two calls
+    to action on the whole site are Fillout intake forms, https://www.aigen.io/pricing returns 404,
+    every API/docs/developer/app/portal subdomain of aigen.io fails to resolve in DNS, and Aigen's
+    own llms.txt names a grower app and three email aliases but no developer surface of any kind.
+  evidence:
+  - url: https://aigen.io/llms.txt
+    status: 200
+  - url: https://aigen.io/sitemap.xml
+    status: 200
+  - url: https://aigen.io/openapi.json
+    status: 404
+  - url: https://www.aigen.io/pricing
+    status: 404
+  - url: https://aigen.io/.well-known/agent-card.json
+    status: 404
+  checked: '2026-09-14'

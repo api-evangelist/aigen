@@ -1,0 +1,90 @@
+generated: '2026-09-14'
+method: probed
+source: https://aigen.io/.well-known/ (live HTTP probe, 2026-09-14)
+name: Aigen well-known discovery probe
+summary: >-
+  Every conventional /.well-known/ discovery path was probed on both hosts Aigen resolves
+  (aigen.io and www.aigen.io). All ten paths returned HTTP 404 on both hosts. No WellKnown,
+  SecurityTxt, APICatalog or AgentCard pointer is emitted, because a recorded absence is not a
+  presence. Subdomains commonly used for API/docs/app surfaces (api., app., docs., developer.,
+  developers., portal., dashboard., fleet., console., my., grower., cloud., data.) do not resolve
+  in DNS, so there were no additional hosts to probe.
+hosts:
+- host: aigen.io
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: www.aigen.io
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+served_discovery_documents:
+- path: /llms.txt
+  host: aigen.io
+  status: 200
+  content_type: text/plain
+  file: ../llms/aigen-llms.txt
+  note: >-
+    A real, hand-authored llms.txt describing the company, its pages, key facts and contacts.
+    It documents no API surface.
+- path: /robots.txt
+  host: aigen.io
+  status: 200
+  content_type: text/plain
+  file: aigen-robots.txt
+  note: >-
+    Carries Cloudflare-managed Content-Signal directives plus a hand-authored Aigen policy block.
+- path: /sitemap.xml
+  host: aigen.io
+  status: 200
+  content_type: application/xml
+  note: Eight URLs, all marketing/newsroom pages. No developer or API paths.
+content_signals:
+  present: true
+  source_url: https://aigen.io/robots.txt
+  directive: 'Content-Signal: search=yes,ai-train=no,use=reference'
+  provenance: >-
+    The Content-Signal line is emitted inside a "# BEGIN Cloudflare Managed content" block, so it
+    is Cloudflare's managed-robots.txt feature serving on Aigen's domain rather than a line Aigen
+    typed. It is served from a host Aigen controls and is recorded as present on that basis; the
+    authorship distinction is stated here rather than implied.
+  stated_vs_deployed_conflict: true
+  conflict_detail: >-
+    Aigen's own authored block, further down the same file, explicitly Allows GPTBot, OAI-SearchBot,
+    ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Perplexity-User,
+    Google-Extended, Applebot-Extended, Amazonbot, Bytespider, meta-externalagent and CCBot, and
+    carries a comment saying Aigen wants to be "discoverable and referenceable in AI search
+    results". The Cloudflare managed block above it Disallows Amazonbot, Applebot-Extended,
+    Bytespider and meta-externalagent. Under robots.txt group precedence the first matching
+    user-agent group wins, so for those four agents the edge blocks what the site owner wrote an
+    Allow for. Aigen's own comment anticipates this and names the dashboard toggle. Recorded as an
+    observed stated-policy-vs-deployed-behavior divergence, not as a fault.
+agent_card:
+  found: false
+  note: >-
+    Both /.well-known/agent-card.json and the pre-0.3 /.well-known/agent.json returned 404 on both
+    hosts. No a2a/ artifact is written and no AgentCard pointer is emitted.

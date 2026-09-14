@@ -1,0 +1,34 @@
+# Aigen
+
+> Aigen builds fully autonomous, solar-powered farm robots that deliver daily, chemical-free weed control. Its mission is to accelerate the transition to regenerative agriculture by replacing herbicides with precise, AI-driven robotics.
+
+Aigen ("AI Generated Agriculture") was founded in 2020. Its flagship product, the Element robot, uses AI vision to identify and mechanically strike weeds — including herbicide-resistant weeds — with no chemicals. Element robots run 100% on solar power with onboard battery storage, are built to withstand rain, mud, slopes, and rough terrain across multiple growing seasons, and coordinate as a crew over an intelligent mesh network with no farmer intervention required.
+
+Aigen operates as a managed service: (1) a grower talks to a local Aigen agent, (2) Aigen delivers, runs, and maintains the robot fleet throughout the growing season, and (3) the grower tracks their fields via app and harvests chemical-free crops.
+
+## Pages
+
+- [Home](https://www.aigen.io/): Overview of the Element robot and Aigen's autonomous, chemical-free weeding platform.
+- [About](https://www.aigen.io/about): Aigen's mission, founding story, team background, and how the managed service works.
+- [Contact](https://www.aigen.io/contact): How to reach sales, media, and partnerships, plus the operation intake form.
+- [Privacy Notice](https://www.aigen.io/privacy): How Aigen collects and handles website data.
+
+## Key facts
+
+- Product: Element — autonomous, solar-powered weeding robot with AI vision and mechanical (chemical-free) weed control.
+- Category: agricultural robotics / autonomous farming / regenerative agriculture.
+- Model: managed robotics-as-a-service across the growing season.
+- Founded: 2020.
+
+## Contact
+
+- Sales & operation intake: https://www.aigen.io/contact
+- Media and press: media@aigen.io
+- Partnerships: partners@aigen.io
+- Careers: https://jobs.lever.co/aigen/
+
+## Elsewhere
+
+- LinkedIn: https://www.linkedin.com/company/aigeninc
+- X (Twitter): https://twitter.com/Aigenio
+- YouTube: https://www.youtube.com/@aigen-inc

@@ -1,0 +1,34 @@
+generated: '2026-09-14'
+method: searched
+source: registry.npmjs.org, pypi.org, api.github.com
+name: Aigen client libraries and SDKs
+official_count: 0
+package_count: 0
+packages: []
+note: >-
+  No first-party Aigen client library exists on any public registry. Aigen ships no public API, so
+  there is nothing for an SDK to wrap. This file exists to record the search and, more importantly,
+  to record a name collision that a future round would otherwise walk into.
+name_collision_warning: >-
+  Searching npm for "aigen" returns @b6db07d1a5/aigen-sdk, an SDK for face recognition published by
+  a personal account (sitthichai.wa@gmail.com) against github.com/b6db07d1a5/aigen-face-recognition-sdk.
+  It belongs to AIGEN (aigencorp.com / aigen.online / docs.aigen.online), a Thai document-OCR, facial-
+  recognition and NLP API vendor that is an entirely different company from Aigen the agricultural
+  robotics firm at aigen.io profiled here. Likewise github.com/AIgen is the personal account of a
+  Carnegie Mellon machine-learning graduate student in Pittsburgh (created 2013, blog aigen.github.io),
+  not a company org. Neither is attributed to this provider. Per STEP 0c, a contract or package is
+  judged by what it says about itself, not by a matching name.
+registries_checked:
+- registry: npm
+  query: https://registry.npmjs.org/-/v1/search?text=aigen
+  status: 200
+  first_party_hits: 0
+- registry: pypi
+  url: https://pypi.org/pypi/aigen/json
+  status: 404
+  first_party_hits: 0
+- registry: github
+  url: https://api.github.com/orgs/aigen
+  status: 404
+  first_party_hits: 0
+  note: No GitHub organization named aigen or aigen-inc exists.

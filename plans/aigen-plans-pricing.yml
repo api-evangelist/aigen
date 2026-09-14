@@ -1,0 +1,29 @@
+generated: '2026-09-14'
+method: searched
+source: https://www.aigen.io/contact
+name: Aigen plans and pricing
+plan_count: 0
+pricing_published: false
+access_model: contact-sales
+note: >-
+  Aigen publishes no pricing page and no plan tiers. https://www.aigen.io/pricing returns HTTP 404,
+  no /pricing link exists anywhere in the sitemap (eight URLs, all marketing/newsroom), and the
+  company's own llms.txt describes the commercial motion as "a grower talks to a local Aigen agent"
+  followed by Aigen delivering, running and maintaining the robot fleet through the growing season.
+  Both calls to action on https://www.aigen.io/contact are intake forms hosted on Fillout
+  (forms.fillout.com/t/bhZsXWR7rLus for agriculture, forms.fillout.com/t/c8aRLqFNpRus for other
+  industries) rather than a signup or a price. This is a managed robotics-as-a-service engagement
+  priced per deployment, not a self-serve product, so plan_count is 0 as a measured fact rather than
+  as a gap in this profile.
+plans: []
+evidence:
+- url: https://www.aigen.io/pricing
+  status: 404
+- url: https://www.aigen.io/contact
+  status: 200
+- url: https://aigen.io/sitemap.xml
+  status: 200
+  note: Eight URLs, none of them a pricing or plans page.
+- url: https://aigen.io/llms.txt
+  status: 200
+  note: Describes the three-step managed-service motion; names no price or tier.
